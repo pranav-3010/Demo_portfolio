@@ -1,8 +1,8 @@
 ![Logo](cp.png)
 
-# Rahul Portfolio Showcase 💻
+# Pranav Portfolio Showcase 💻
 
-Welcome to Rahul's Portfolio Showcase!
+Welcome to Pranav's Portfolio Showcase!
 A modern and elegant personal portfolio website built to present my projects, skills, and professional journey using HTML, CSS, and JS.
 ---
 
@@ -66,4 +66,4 @@ Open `porotofilo8/index.html` in your browser, or run a local server from the `p
 
 ---
 
-Made with ❤️ by **Rahul**
+Made with ❤️ by **Pranav**
