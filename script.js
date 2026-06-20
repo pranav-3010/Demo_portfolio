@@ -103,3 +103,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ===============================
+// CONTACT FORM (FormSubmit → Gmail)
+// ===============================
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+const formSubmitBtn = document.getElementById("form-submit-btn");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const honey = contactForm.querySelector('input[name="_honey"]');
+        if (honey && honey.value) return;
+
+        formSubmitBtn.disabled = true;
+        formSubmitBtn.textContent = "Sending...";
+        formStatus.textContent = "";
+        formStatus.className = "form-status";
+
+        const formData = {
+            name: contactForm.querySelector("#user_name").value.trim(),
+            email: contactForm.querySelector("#user_email").value.trim(),
+            message: contactForm.querySelector("#user_message").value.trim(),
+            _subject: "New message from your portfolio website",
+            _template: "table",
+        };
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/balapranav3010@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) throw new Error("Failed to send");
+
+            formStatus.textContent = "Message sent! I'll get back to you soon.";
+            formStatus.classList.add("success");
+            contactForm.reset();
+        } catch {
+            formStatus.textContent = "Something went wrong. Please email me directly at balapranav3010@gmail.com";
+            formStatus.classList.add("error");
+        } finally {
+            formSubmitBtn.disabled = false;
+            formSubmitBtn.textContent = "Send Message";
+        }
+    });
+}
