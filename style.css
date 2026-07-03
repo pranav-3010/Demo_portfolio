@@ -1113,3 +1113,282 @@ hr {
   }
 }
 
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE OVERRIDES
+   Keeps laptop (>= 1024px) styles completely untouched.
+   ========================================================================== */
+@media (max-width: 1023px) {
+    /* --- INTRO SECTION --- */
+    #intro {
+        height: auto;
+        padding: 40px 10px;
+        min-height: 100vh;
+    }
+    
+    .card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+    
+    .content {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    
+    .left {
+        text-align: center;
+    }
+    
+    .left h1 {
+        font-size: 32px;
+    }
+    
+    .desc {
+        margin: 14px auto 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .site-link {
+        margin-top: 18px;
+        display: inline-flex;
+    }
+    
+    .right {
+        padding: 20px;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .orbit-box {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .core {
+        inset: 38px;
+    }
+    
+    .core span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    
+    .stats {
+        margin-top: 16px;
+        gap: 10px;
+    }
+    
+    .stats div {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    .stats h4 {
+        font-size: 18px;
+    }
+    
+    .stats p {
+        font-size: 10px;
+    }
+    
+    /* --- GENERAL SECTIONS --- */
+    .home,
+    .about,
+    .project,
+    .services {
+        margin: 80px 20px !important;
+    }
+    
+    /* --- HOME SECTION --- */
+    .home-container {
+        flex-direction: column-reverse;
+        gap: 2.5rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .info-home h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+    
+    .info-home h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .info-p {
+        padding-bottom: 15px;
+    }
+    
+    .info-p p {
+        padding-bottom: 2px;
+    }
+    
+    .info-p2 {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    
+    .btnn {
+        justify-content: center;
+    }
+    
+    .hhr {
+        padding-bottom: 20px;
+    }
+    
+    .follow {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .follow ul {
+        justify-content: center;
+    }
+    
+    .home img {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* --- ABOUT SECTION --- */
+    .about-info {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+    }
+    
+    .about-info2 {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .about h3 {
+        text-align: center;
+        font-size: 22px;
+    }
+    
+    .about-text p {
+        text-align: center;
+    }
+    
+    .photo-container {
+        padding: 8px;
+    }
+    
+    .photo-container img {
+        max-width: 220px;
+    }
+    
+    .tape {
+        width: 70px;
+        height: 22px;
+    }
+    
+    .tape1 {
+        top: -12px;
+        left: 20px;
+    }
+    
+    .tape2 {
+        bottom: -12px;
+        right: 20px;
+    }
+    
+    /* --- PROJECTS SECTION --- */
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .project h1 {
+        font-size: 26px;
+    }
+    
+    /* --- SERVICES SECTION --- */
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        width: 100%;
+    }
+    
+    .service-card {
+        padding: 1.8rem;
+    }
+    
+    .services h1 {
+        font-size: 26px;
+    }
+    
+    /* --- CONTACT SECTION --- */
+    #contact {
+        padding: 60px 20px;
+    }
+}
+
+/* --- MOBILE PHONE NAVIGATION OVERRIDES --- */
+@media (max-width: 768px) {
+    header {
+        top: auto;
+        bottom: 12px;
+        padding: 0;
+    }
+    
+    .div-list {
+        padding: 0;
+    }
+    
+    .ul-list {
+        gap: 0.6rem;
+        padding: 8px 12px;
+        border-radius: 40px;
+        max-width: 92%;
+        width: max-content;
+        margin: 0 auto;
+        justify-content: space-around;
+        box-shadow: 0 4px 20px rgba(0, 40, 150, 0.4);
+    }
+    
+    .ul-list li {
+        padding: 6px 10px;
+        gap: 2px;
+    }
+    
+    .ul-list li i {
+        font-size: 13px;
+    }
+    
+    .ul-list li a {
+        font-size: 10px;
+    }
+}
+
+/* Hide navigation text on tiny screens to save space and show only icons */
+@media (max-width: 480px) {
+    .ul-list {
+        gap: 1rem;
+        padding: 8px 16px;
+    }
+    .ul-list li {
+        padding: 8px;
+    }
+    .ul-list li a {
+        display: none;
+    }
+}
+
