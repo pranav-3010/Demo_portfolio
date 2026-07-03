@@ -90,10 +90,16 @@ window.addEventListener("scroll", () => {
 });
 
 // ===============================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
+document.querySelectorAll('.ul-list li, a[href^="#"]').forEach(el => {
+    el.addEventListener("click", function (e) {
+        const anchor = this.tagName === 'LI' ? this.querySelector('a') : this;
+        if (!anchor) return;
+        
+        const href = anchor.getAttribute("href");
+        if (!href || !href.startsWith("#")) return;
+
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(href);
 
         if (target) {
             window.scrollTo({
