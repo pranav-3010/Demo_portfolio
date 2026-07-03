@@ -1361,8 +1361,8 @@ hr {
 /* --- MOBILE PHONE NAVIGATION OVERRIDES --- */
 @media (max-width: 768px) {
     header {
-        top: auto;
-        bottom: 12px;
+        top: 15px;
+        bottom: auto;
         padding: 0;
     }
     
